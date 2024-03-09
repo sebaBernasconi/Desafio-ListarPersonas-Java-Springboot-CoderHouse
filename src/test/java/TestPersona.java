@@ -1,8 +1,6 @@
 import com.coderhouse.modell.Persona;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 public class TestPersona {
 
@@ -17,12 +15,26 @@ public class TestPersona {
 
         Persona oliver = new Persona("Oliver","Bernasconi");
 
-        List<Persona> personas = new ArrayList<Persona>();
+        List<Persona> listadoDePersonas = new ArrayList<Persona>();
 
-        personas.add(sebas);
-        personas.add(juan);
-        personas.add(lucas);
-        personas.add(betty);
-        personas.add(oliver);
+        listadoDePersonas.add(sebas);
+        listadoDePersonas.add(juan);
+        listadoDePersonas.add(lucas);
+        listadoDePersonas.add(betty);
+        listadoDePersonas.add(oliver);
+
+        Collections.sort(listadoDePersonas, new Comparator<Persona>() {
+            @Override
+            public int compare(Persona o1, Persona o2) {
+                return new String()o1.getNombre().compareTo(new String(o2.getNombre()));
+            }
+        });
+
+        System.out.println("Lista ordenada alfbeticamente");
+
+        for (Object p :
+                listadoDePersonas) {
+            System.out.println(p.toString());
+        }
     }
 }
