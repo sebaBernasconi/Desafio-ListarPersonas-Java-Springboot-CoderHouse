@@ -19,15 +19,7 @@ public class Persona implements Comparable<Persona>{
         return this.nombre.compareTo(personaDos.getNombre());
     }
 
-
-    //Metodos de la Clase
-    public int compareToApellidos(Persona personaDos){
-        return this.apellido.compareTo(personaDos.getApellido());
-    }
-
-
     //Getters y Setters
-
 
     public String getNombre() {
         return nombre;
